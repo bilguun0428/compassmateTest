@@ -1,0 +1,7 @@
+#set($subject = "Compassmate test message")
+<!DOCTYPE html>
+<html>
+<body>
+Test message
+</body>
+</html> 

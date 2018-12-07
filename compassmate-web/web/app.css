@@ -1,0 +1,100 @@
+.view-color-green {
+    background-color: rgba(77, 250, 144, 0.3);
+}
+.view-color-yellow {
+    background-color: rgba(250, 190, 77, 0.3);
+}
+.view-color-red {
+    background-color: rgba(255, 84, 104, 0.3);
+}
+
+.view-item-disabled {
+    opacity: 0.5;
+}
+
+.toolbar-header-style {
+    background-color: #5fa2dd !important;
+}
+
+body.x-border-layout-ct, div.x-border-layout-ct {
+    background-color: #bbbbbb !important;
+}
+
+.x-fieldset {
+    overflow: visible !important;
+}
+
+.logo-div {
+	display: block;
+	width: 300px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 20vh;
+}
+
+.logo {
+	width: 300px;
+	height: 80px;
+	background: url(compassmate_mn.png) no-repeat;
+	/* padding: 10px 20px 10px 0; */
+	display: block;
+}
+
+.logo.en {
+	background: url(compassmate_en.png) no-repeat;
+}
+
+#attribution {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    color: #454545;
+	font-size: 11px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border-top: solid 1px #DFDFDF;
+	height: 41px;
+}
+
+#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0)
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+

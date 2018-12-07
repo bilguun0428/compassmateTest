@@ -1,0 +1,13 @@
+target
+nbactions.xml
+.classpath
+.project
+.settings
+.idea
+*.iml
+.DS_Store
+.checkstyle
+.swp
+ext
+build
+compassmate-web/web/app.min.js

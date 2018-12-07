@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+
+<properties>
+
+    <entry key="config.default">./setup/default.xml</entry>
+
+    <entry key='web.path'>./compassmate-web/web</entry>
+    <entry key='web.debug'>true</entry>
+    <entry key='web.console'>true</entry>
+	
+    <entry key='geocoder.enable'>true</entry>
+
+    <entry key='logger.file'>target/copmassmate-server.log</entry>
+
+	<!--
+    <entry key='database.driver'>org.h2.Driver</entry>
+    <entry key='database.url'>jdbc:h2:./target/database</entry>
+    <entry key='database.user'>sa</entry>
+    <entry key='database.password'></entry>
+	-->
+	<entry key='database.driver'>com.mysql.jdbc.Driver</entry> 
+	<entry key='database.url'>jdbc:mysql://192.168.1.120:3306/compassmate?allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;useSSL=false&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
+	<entry key='database.user'>root</entry> 
+	<entry key='database.password'>admin</entry>
+
+
+    <entry key='intellitrac.port'>6037</entry>
+
+</properties>

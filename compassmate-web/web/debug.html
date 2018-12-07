@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Compassmate</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="spinner"></div>
+<div id="logo" class="logo-div">
+	<i class="logo"></i>
+</div>
+<!-- <div id="attribution">CompassMate © 2011-2018. Зохиогчийн эрхийн хуулиар хамгаалагдсан | Ай-Ти-Зон ХХК</div> -->
+<script id="loadScript" mode="debug" src="load.js"></script>
+<script type="text/javascript">
+	var
+		snow_size_min = 50,
+		snow_size_max = 100,
+		snow_num_flakes = 100,
+		snow_horiz_start = 0,
+		snow_horiz_end = 2000,
+		snow_vert_start = 0,
+		snow_vert_end = 2000,
+		snow_flake_color = '#FFFFFF',
+		snow_fall_speed = 60;
+		if(location.search.indexOf('en') !== -1) {
+			document.getElementsByClassName('logo')[0].classList.add('en')
+		}
+</script>
+</body>
+</html>

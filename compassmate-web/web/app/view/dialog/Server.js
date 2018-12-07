@@ -1,0 +1,152 @@
+ 
+
+Ext.define('Compassmate.view.dialog.Server', {
+    extend: 'Compassmate.view.dialog.BaseEdit',
+
+    requires: [
+        'Compassmate.view.dialog.MapPickerController'
+    ],
+
+    controller: 'mapPicker',
+    title: Strings.serverTitle,
+
+    items: {
+        xtype: 'form',
+        items: [{
+            xtype: 'fieldset',
+            title: Strings.sharedPreferences,
+            items: [{
+                xtype: 'combobox',
+                name: 'map',
+                fieldLabel: Strings.mapLayer,
+                store: 'MapTypes',
+                displayField: 'name',
+                valueField: 'key',
+                editable: false
+            }, {
+                xtype: 'textfield',
+                name: 'bingKey',
+                fieldLabel: Strings.mapBingKey
+            }, {
+                xtype: 'textfield',
+                name: 'mapUrl',
+                fieldLabel: Strings.mapCustom
+            }, {
+                xtype: 'combobox',
+                name: 'distanceUnit',
+                fieldLabel: Strings.sharedDistance,
+                store: 'DistanceUnits',
+                displayField: 'name',
+                valueField: 'key',
+                editable: false
+            }, {
+                xtype: 'combobox',
+                name: 'speedUnit',
+                fieldLabel: Strings.settingsSpeedUnit,
+                store: 'SpeedUnits',
+                displayField: 'name',
+                valueField: 'key',
+                editable: false
+            }, {
+                xtype: 'numberfield',
+                reference: 'latitude',
+                name: 'latitude',
+                fieldLabel: Strings.positionLatitude,
+                decimalPrecision: Compassmate.Style.coordinatePrecision
+            }, {
+                xtype: 'numberfield',
+                reference: 'longitude',
+                name: 'longitude',
+                fieldLabel: Strings.positionLongitude,
+                decimalPrecision: Compassmate.Style.coordinatePrecision
+            }, {
+                xtype: 'numberfield',
+                reference: 'zoom',
+                name: 'zoom',
+                fieldLabel: Strings.serverZoom
+            }, {
+                xtype: 'checkboxfield',
+                inputValue: true,
+                uncheckedValue: false,
+                name: 'twelveHourFormat',
+                fieldLabel: Strings.settingsTwelveHourFormat,
+                allowBlank: false
+            }, {
+                xtype: 'checkboxfield',
+                inputValue: true,
+                uncheckedValue: false,
+                name: 'forceSettings',
+                fieldLabel: Strings.serverForceSettings,
+                allowBlank: false
+            }, {
+                xtype: 'combobox',
+                name: 'coordinateFormat',
+                fieldLabel: Strings.settingsCoordinateFormat,
+                store: 'CoordinateFormats',
+                displayField: 'name',
+                valueField: 'key',
+                editable: false
+            }, {
+                xtype: 'combobox',
+                name: 'timezone',
+                fieldLabel: Strings.sharedTimezone,
+                store: 'AllTimezones',
+                queryMode: 'local',
+                displayField: 'key',
+                editable: false
+            }]
+        }, {
+            xtype: 'fieldset',
+            title: Strings.sharedPermissions,
+            collapsible: true,
+            collapsed: true,
+            items: [{
+                xtype: 'checkboxfield',
+                inputValue: true,
+                uncheckedValue: false,
+                name: 'registration',
+                fieldLabel: Strings.serverRegistration,
+                allowBlank: false
+            }, {
+                xtype: 'checkboxfield',
+                inputValue: true,
+                uncheckedValue: false,
+                name: 'readonly',
+                fieldLabel: Strings.serverReadonly,
+                allowBlank: false
+            }, {
+                xtype: 'checkboxfield',
+                inputValue: true,
+                uncheckedValue: false,
+                name: 'deviceReadonly',
+                fieldLabel: Strings.userDeviceReadonly,
+                allowBlank: false
+            }]
+        }]
+    },
+
+    buttons: [{
+        text: Strings.sharedAttributes,
+        handler: 'showAttributesView'
+    }, {
+        glyph: 'xf041@FontAwesome',
+        minWidth: 0,
+        handler: 'getMapState',
+        tooltip: Strings.sharedGetMapState,
+        tooltipType: 'title'
+    }, {
+        xtype: 'tbfill'
+    }, {
+        glyph: 'xf00c@FontAwesome',
+        tooltip: Strings.sharedSave,
+        tooltipType: 'title',
+        minWidth: 0,
+        handler: 'onSaveClick'
+    }, {
+        glyph: 'xf00d@FontAwesome',
+        tooltip: Strings.sharedCancel,
+        tooltipType: 'title',
+        minWidth: 0,
+        handler: 'closeView'
+    }]
+});
